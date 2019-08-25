@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:Widget xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet;assembly=Wallet"
+             x:Class="Wallet.TransactionsView">
+    <ContentView.Content>
+        <StackLayout Margin="0" Padding="7.5, 0, 7.5, 5" Orientation="Vertical" BackgroundColor="WhiteSmoke" Spacing="0">
+            <!--Displaying the Title and Remaining balance Text-->
+            <StackLayout Orientation="Horizontal">
+                <Label Margin="0, 0, 0, 10" Text="Transactions" FontSize="Medium" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Start"/>
+                <Image x:Name="removeWidget"    Source="remove_widget.png"   HeightRequest="28" WidthRequest="28" HorizontalOptions="End"/>
+                <Image x:Name="addWidget"       Source="add_widget.png"      HeightRequest="28" WidthRequest="28" HorizontalOptions="End"/>
+            </StackLayout>
+            <Grid x:Name="transactionDisplayDetails" Margin="0, 0, 0, 10" Padding="7.5, 0, 7.5, 0" HorizontalOptions="FillAndExpand" BackgroundColor="#DBDBDB">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="0" Grid.Row="0" Grid.Column="0">
+                    <Label Text="Description/Date" FontSize="Small" TextColor="Black" HorizontalTextAlignment="Start"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand" Spacing="0" Grid.Row="0" Grid.Column="1">
+                    <local:ExtendedLabel Text="Amount"  FontSize="Small" TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand" Spacing="0" Grid.Row="0" Grid.Column="2">
+                    <local:ExtendedLabel Text="Balance"  FontSize="Small" TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Grid>
+            <StackLayout x:Name="transactionsList" Orientation="Vertical" Margin="0, 0, 0, 10">
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="38">
+                    <Image x:Name="addTransaction" Source="new_transaction.png" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                </StackLayout>
+            </StackLayout>
+            <Label x:Name="showTransactions"  Text="Show More" FontSize="Small" TextColor="CadetBlue" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start"/>
+            <Label x:Name="transactionsCount" FontSize="Micro" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start"/>
+        </StackLayout>
+    </ContentView.Content>
+</local:Widget>

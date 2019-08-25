@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet;assembly=Wallet"
+             x:Class="Wallet.NavigationMenu"
+             Title="Wallet">
+    <Page.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LouisGeorgeCafe">
+                <On Platform="Android" Value="Louis_George_Cafe.ttf#Louis George Cafet" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousines">
+                <On Platform="Android" Value="Champagne_Limousines.ttf#Champagne Limousines" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousinesBold">
+                <On Platform="Android" Value="Champagne_Limousines_Bold.ttf#Champagne Limousines Bold" />
+            </OnPlatform>
+        </ResourceDictionary>
+        <Style x:Key="profileLabel" TargetType="local:ExtendedLabel">
+            <Setter Property="AbsoluteLayout.LayoutFlags"   Value="All"/>
+            <Setter Property="HorizontalTextAlignment"      Value="Start"/>
+            <Setter Property="VerticalTextAlignment"        Value="Center"/>
+        </Style>
+    </Page.Resources>
+    <StackLayout>
+        <AbsoluteLayout x:Name="viewProfile" Margin="0, 0, 0, 0" HorizontalOptions="Fill" HeightRequest="75" BackgroundColor="Green">
+            <Image AbsoluteLayout.LayoutBounds="0.1, 0.5, 0.15, 0.75" AbsoluteLayout.LayoutFlags="All" Source="avatar.png"/>
+            <Label x:Name="test"/>
+            <local:ExtendedLabel x:Name="username"      AbsoluteLayout.LayoutBounds="1, 0.2, 0.75, 0.45"  Padding="0, -15, 0, 0"   FontSize="30" FontAttributes="Bold"  Style="{StaticResource profileLabel}"/>
+            <local:ExtendedLabel x:Name="usernameID"    AbsoluteLayout.LayoutBounds="1, 0.82, 0.75, 0.3"  Padding="0"              FontSize="15"                        Style="{StaticResource profileLabel}"/>
+        </AbsoluteLayout>
+        <ListView x:Name="listView" x:FieldModifier="public" RowHeight="30">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:NavigationMenuItem}">
+                    <local:NavigationMenuItem Title="Get Premium"       TargetType="{x:Type local:ViewCards}"/>
+                    
+                    <local:NavigationMenuItem Title="Home"              TargetType="{x:Type local:ViewCards}"/>
+                    <local:NavigationMenuItem Title="New Card"          TargetType="{x:Type local:CardNew}"/>
+                    <local:NavigationMenuItem Title="Settings"          TargetType="{x:Type local:CardNew}"/>
+
+                    <local:NavigationMenuItem Title="Logout"          TargetType="{x:Type local:UserAccountChoice}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="25">
+                        <StackLayout BackgroundColor="Accent" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Padding="5">
+                            <local:ExtendedLabel Text="{Binding Title}" FontSize="20" VerticalTextAlignment="Center" FontFamily="{StaticResource ChampagneLimousines}" BackgroundColor="AliceBlue"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

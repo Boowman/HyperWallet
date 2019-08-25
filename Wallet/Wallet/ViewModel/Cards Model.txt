@@ -1,0 +1,33 @@
+﻿Selected
+<AbsoluteLayout WidthRequest="224" HeightRequest="140" BackgroundColor="AliceBlue">
+    <!--Background-->
+    <Image Source="card_template.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+    <!--Type-->
+    <Image Source="wallet_logo.png" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"  HeightRequest="42" AbsoluteLayout.LayoutBounds="0.108, 0.28, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+    <!--Card Name-->
+    <StackLayout BackgroundColor="Accent" AbsoluteLayout.LayoutBounds="0.855, 0.1, 0.44, 0.13" AbsoluteLayout.LayoutFlags="All">
+        <Label Text="Student Card" FontSize="Small" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+    </StackLayout>
+    <!--Balance-->
+    <StackLayout BackgroundColor="Accent" Padding="0, -3, 0, 0" AbsoluteLayout.LayoutBounds="0.16, 0.938, 0.35, 0.13" AbsoluteLayout.LayoutFlags="All">
+        <Label Text="£540.60" FontSize="20" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+    </StackLayout>
+    <!--Latest Transaction-->
+    <StackLayout BackgroundColor="Accent" Padding="0, -2, 0, 0" AbsoluteLayout.LayoutBounds="0.785, 0.94, 0.26, 0.1" AbsoluteLayout.LayoutFlags="All">
+        <Label Text="- £32.25 >" FontSize="Small" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+    </StackLayout>
+</AbsoluteLayout>
+
+Other
+<AbsoluteLayout WidthRequest="160" HeightRequest="100" BackgroundColor="AliceBlue" VerticalOptions="CenterAndExpand">
+    <!--Background-->
+    <Image Source="card_template.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+    <!--Type-->
+    <Image Source="wallet_logo.png" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"  HeightRequest="30" AbsoluteLayout.LayoutBounds="0.108, 0.28, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+    <!--Card Name-->
+    <Label Text="Savings Account" FontSize="Micro" TextColor="White" AbsoluteLayout.LayoutBounds="0.855, 0.1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalTextAlignment="Center"/>
+    <!--Balance-->
+    <Label Text="£1200.00" FontSize="Small"  TextColor="White" AbsoluteLayout.LayoutBounds="0.16, 0.97, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalTextAlignment="Center"/>
+    <!--Latest Transaction-->
+    <Label Text="+ £50 >" FontSize="Micro" TextColor="White" AbsoluteLayout.LayoutBounds="0.79, 0.95, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalTextAlignment="Center"/>
+</AbsoluteLayout>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:CardManager xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet"
+             x:Class="Wallet.CardNew"
+             NavigationPage.HasNavigationBar="False">
+    <Page.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LouisGeorgeCafe">
+                <On Platform="Android" Value="Louis_George_Cafe.ttf#Louis George Cafet" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousines">
+                <On Platform="Android" Value="Champagne_Limousines.ttf#Champagne Limousines" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousinesBold">
+                <On Platform="Android" Value="Champagne_Limousines_Bold.ttf#Champagne Limousines Bold" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <local:ExtendedStackLayout StartColor="4E5C87" EndColor="1C2335">
+            <Grid Margin="0, 0, 0, 30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <AbsoluteLayout Padding="0" Margin="0" Grid.Row="0" Grid.Column="0" HorizontalOptions="StartAndExpand" VerticalOptions="Start" HeightRequest="200">
+                    <Image Source="card_details_template.png" HorizontalOptions="StartAndExpand" VerticalOptions="Start" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                    <StackLayout Margin="60, 30, 60, 0" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3" AbsoluteLayout.LayoutFlags="All">
+                        <Image x:Name="menuButon"                   Source="menuButton_white.png"       HorizontalOptions="Start"               WidthRequest="24"           HeightRequest="24"/>
+                        <local:ExtendedEntry x:Name="cardLabel"     Placeholder="Enter Card Name"       HorizontalOptions="CenterAndExpand"     VerticalOptions="Center"    FontFamily="{StaticResource ChampagneLimousinesBold}" TextChanged="EntryCardName"/>
+                        <Image x:Name="saveCard"                    Source="save_account.png"           HorizontalOptions="Start"               WidthRequest="24"           HeightRequest="24"/>
+                    </StackLayout>
+                    <StackLayout Margin="0, 20, 0, 0" Padding="0, 0, 0, 0" AbsoluteLayout.LayoutBounds="0.5, 0.4, 0.6678, 0.25" AbsoluteLayout.LayoutFlags="All" Orientation="Horizontal" Spacing="0">
+                        <local:ExtendedLabel  Text="XXXX-XXXX-XXXX-" WidthRequest="360"     HorizontalOptions="StartAndExpand"      Margin="0, 0, 0, 0"     FontFamily="{StaticResource ChampagneLimousines}"   HorizontalTextAlignment="End" FontSize="30" TextColor="White"/>
+                        <local:ExtendedEntry  x:Name="cardEndLabel"  WidthRequest="70"      HorizontalOptions="StartAndExpand"      Margin="0, 0, 0, -6"   FontFamily="{StaticResource ChampagneLimousines}"   HorizontalTextAlignment="End" TextChanged="EntryCardNumber"/>
+                    </StackLayout>
+                    <StackLayout Margin="30, 0, 0, 0" Padding="0, -10, 0, 0" AbsoluteLayout.LayoutBounds="0, 0.8, 0.67, 0.22" AbsoluteLayout.LayoutFlags="All" Orientation="Horizontal">
+                        <local:ExtendedPicker x:Name="currency"         WidthRequest="30"   HorizontalOptions="Start"               Margin="0, 0, 0, -5"        FontFamily="{StaticResource ChampagneLimousines}"/>
+                        <local:ExtendedEntry  x:Name="balanceLabel"     WidthRequest="90"   HorizontalOptions="StartAndExpand"      Padding="30, 0, -30, 0"       Margin="-7, 0, 0, -5"    FontFamily="{StaticResource ChampagneLimousines}" HorizontalTextAlignment="Start" TextChanged="EnterBalance" Placeholder="000.00"/>
+                    </StackLayout>
+                    <StackLayout Margin="0, 0, 0, 0" Padding="0, -10, 0, 0" AbsoluteLayout.LayoutBounds="0.93, 0.8, 0.27, 0.22" AbsoluteLayout.LayoutFlags="All" Orientation="Horizontal">
+                        <local:ExtendedPicker x:Name="cardType" WidthRequest="110" HorizontalOptions="Start" Margin="0, 0, 0, -5" FontFamily="{StaticResource ChampagneLimousines}"/>
+                    </StackLayout>
+                </AbsoluteLayout>
+                <StackLayout Margin="30, -10, 30, -2" Padding="0" Orientation="Vertical" Grid.Row="1" Grid.Column="0" VerticalOptions="StartAndExpand" HeightRequest="30">
+                    <local:ExtendedButton Text="Add New Widget" HorizontalOptions="FillAndExpand" VerticalOptions="Start" BackgroundColor="#7783AF" TextColor="White" FontFamily="{StaticResource ChampagneLimousinesBold}" Clicked="GoToWidgetPage"/>
+                </StackLayout>
+            </Grid>
+            <ScrollView Padding="30, 0, 30, 15" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                <StackLayout x:Name="widgetsHolder" Orientation="Vertical" Spacing="15">
+
+                </StackLayout>
+            </ScrollView>
+        </local:ExtendedStackLayout>
+    </ContentPage.Content>
+</local:CardManager>

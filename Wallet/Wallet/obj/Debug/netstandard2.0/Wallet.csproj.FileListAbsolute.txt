@@ -1,0 +1,61 @@
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.deps.json
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.dll
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.pdb
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\CardModel.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\BalanceChart.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\CashFlow.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\MonthlyCharges.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\TransactionsView\Transaction.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\TransactionsView\TransactionsView.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\WeeklySpendings.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\Widget.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Account\LoginView.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Account\RegisterView.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Account\SecurityCheckView.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Base\CardManager.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Base\Page.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Card\CardDetails.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Card\CardNew.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Card\WidgetsView.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\NavigationMenu\NavigationMenu.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\ViewCards.xaml.g.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.csproj.CoreCompileInputs.cache
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.AssemblyInfoInputs.cache
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.AssemblyInfo.cs
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.dll
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.pdb
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.csprojAssemblyReference.cache
+D:\Development\Projects\Visual Studio\C#\Mobile\Wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\TransactionsView\TransactionPopup.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.deps.json
+D:\Github\wallet\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.dll
+D:\Github\wallet\Wallet\Wallet\bin\Debug\netstandard2.0\Wallet.pdb
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\CardModel.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\BalanceChart.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\CashFlow.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\MonthlyCharges.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\TransactionsView\Transaction.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\TransactionsView\TransactionPopup.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\TransactionsView\TransactionsView.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\WeeklySpendings.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\ViewModel\Widgets\Widget.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Account\SecurityCheckView.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Account\UserAccountChoice.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Base\CardManager.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Base\Page.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Card\CardDetails.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Card\CardNew.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\Card\WidgetsView.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\NavigationMenu\NavigationMenu.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Views\ViewCards.xaml.g.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.csproj.CoreCompileInputs.cache
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.AssemblyInfoInputs.cache
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.AssemblyInfo.cs
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.dll
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.pdb
+D:\Github\wallet\Wallet\Wallet\obj\Debug\netstandard2.0\Wallet.csprojAssemblyReference.cache

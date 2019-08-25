@@ -1,0 +1,14 @@
+﻿-Balance Chart
+	Displaying a line chart with each week with the following options: 7 days, 1 month, 2 months, 3 months, 6 months, 1 year.
+
+-Cash Flow
+	Displays the income and the expenses for that month, then a results by calculating the difference between the two for that month.
+
+-Monthly Charges
+	Displaying a donut chart with all the monthly charges that will be made up to 8 (e.g. Broadband, Phone, Insurance, Fuel, Rent etc )
+
+-Transactions List
+	Just a card view list of all the transactions made in that month, have the option to select to display transactions as old as: options: 7 days, 1 month, 2 months, 3 months, 6 months, 1 year, 2 years and 5 years.
+
+-Weekly Spendings
+	Display a bar chart with 4 weeks containing the amount of transactions made in the respective week.

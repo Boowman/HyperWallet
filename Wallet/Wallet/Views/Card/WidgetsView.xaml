@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet"
+             x:Class="Wallet.WidgetsView"
+             NavigationPage.HasNavigationBar="False">
+    <Page.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LouisGeorgeCafe">
+                <On Platform="Android" Value="Louis_George_Cafe.ttf#Louis George Cafet" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousines">
+                <On Platform="Android" Value="Champagne_Limousines.ttf#Champagne Limousines" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousinesBold">
+                <On Platform="Android" Value="Champagne_Limousines_Bold.ttf#Champagne Limousines Bold" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <local:ExtendedStackLayout StartColor="4E5C87" EndColor="1C2335">
+            <Grid VerticalOptions="StartAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="navBar" Margin="60, 30, 60, 30" Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                    <Image x:Name="backButton" Source="back_button.png" HorizontalOptions="Start" WidthRequest="32" HeightRequest="32"/>
+                    <Label x:Name="title" Text="Wallet" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" FontSize="25" TextColor="#9EAACC"/>
+                </StackLayout>
+                <ScrollView Margin="30, 0, 30, 0" Padding="0, 0, 0, 15" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Grid.Row="1" Grid.Column="0">
+                    <StackLayout x:Name="widgetsHolder" Orientation="Vertical" Spacing="15">
+
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </local:ExtendedStackLayout>
+    </ContentPage.Content>
+</ContentPage>

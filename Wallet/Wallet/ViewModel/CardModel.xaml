@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet"
+             x:Class="Wallet.ViewModel.CardModel"
+             VerticalOptions="CenterAndExpand"
+             HorizontalOptions="CenterAndExpand">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LouisGeorgeCafe">
+                <On Platform="Android" Value="Louis_George_Cafe.ttf#Louis George Cafet" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousines">
+                <On Platform="Android" Value="Champagne_Limousines.ttf#Champagne Limousines" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousinesBold">
+                <On Platform="Android" Value="Champagne_Limousines_Bold.ttf#Champagne Limousines Bold" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <AbsoluteLayout>
+            <!--Background-->
+            <Image Source="card_template.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            <!--Type-->
+            <Image x:Name="cardType" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="48" AbsoluteLayout.LayoutBounds="0.05, 0.36, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+            <!--Card Name-->
+            <StackLayout AbsoluteLayout.LayoutBounds="0.85, 0.21, 0.65, 0.1" AbsoluteLayout.LayoutFlags="All">
+                <Label x:Name="cardLabel" FontSize="15" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0, -3, 0, 0" FontFamily="{StaticResource ChampagneLimousines}"/>
+            </StackLayout>
+            <!--Balance-->
+            <StackLayout Padding="0, 0, 0, -5" AbsoluteLayout.LayoutBounds="0.85, 0.44, 0.65, 0.15" AbsoluteLayout.LayoutFlags="All" Orientation="Horizontal">
+                <Label x:Name="balanceSymbol"   TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Margin="0, 0, 0, 0"  FontFamily="{StaticResource ChampagneLimousines}"/>
+                <Label x:Name="balanceLabel"    TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Margin="-5, 0, 0, -2"  FontFamily="{StaticResource ChampagneLimousines}"/>
+                <Label x:Name="balancePence"    TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="End" Margin="-5, 0, 0, 0"  FontFamily="{StaticResource ChampagneLimousines}"/>
+            </StackLayout>
+            <!--Latest Transaction-->
+            <StackLayout Padding="0, -2, 0, 0" Orientation="Horizontal" AbsoluteLayout.LayoutBounds="0.76, 0.627, 0.5, 0.08" AbsoluteLayout.LayoutFlags="All">
+                <Label x:Name="latestTrasactionLabel"  FontSize="20" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="5, 0, 0, 0"/>
+                <Image x:Name="latestTransactionImage" HeightRequest="14" HorizontalOptions="Start" VerticalOptions="Start" Margin="-5, 3, 0, 0"/>
+            </StackLayout>
+            <!--Interact-->
+            <Button x:Name="selectCard" AbsoluteLayout.LayoutBounds="0.4, 0, 0.975, 0.93" AbsoluteLayout.LayoutFlags="All" Clicked="SelectCard" BackgroundColor="Transparent"/>
+            <Image x:Name="cardDetails" Source="card_details.png" HeightRequest="38" WidthRequest="48" AbsoluteLayout.LayoutBounds="0.5, 1, -1, -1" AbsoluteLayout.LayoutFlags="PositionProportional" IsVisible="False"/>
+        </AbsoluteLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet"
+             x:Class="Wallet.Transaction">
+<ContentView.Content>
+        <!--Displaying Income Transaction-->
+        <StackLayout Padding="7.5, 0, 7.5, 0" Orientation="Horizontal" BackgroundColor="#DBDBDB" HorizontalOptions="FillAndExpand" HeightRequest="38">
+            <Grid x:Name="transactionDisplayDetails" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="0" Grid.Row="0" Grid.Column="0">
+                    <Label x:Name="description" FontSize="Small" TextColor="Black" HorizontalTextAlignment="Start"/>
+                    <Label x:Name="date" FontSize="Small" TextColor="#9E9E9E" HorizontalTextAlignment="Start"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand" Spacing="0" Grid.Row="0" Grid.Column="1">
+                    <local:ExtendedLabel x:Name="value"  FontSize="Small" TextColor="Green" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand" Spacing="0" Grid.Row="0" Grid.Column="2">
+                    <local:ExtendedLabel x:Name="balance"  FontSize="Small" TextColor="Black" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

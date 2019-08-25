@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:Page xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet"
+             x:Class="Wallet.UserAccountChoice"
+             NavigationPage.HasNavigationBar="False">
+    <Page.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LouisGeorgeCafe">
+                <On Platform="Android" Value="Louis_George_Cafe.ttf#Louis George Cafet" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="KeepCalm">
+                <On Platform="Android" Value="KeepCalm-Medium.ttf#KeepCalm-Medium" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousines">
+                <On Platform="Android" Value="Champagne_Limousines.ttf#Champagne Limousines" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousinesBold">
+                <On Platform="Android" Value="Champagne_Limousines_Bold.ttf#Champagne Limousines Bold" />
+            </OnPlatform>
+        </ResourceDictionary>
+        <Style ApplyToDerivedTypes="True" TargetType="local:ExtendedLabel">
+            <Setter Property="FontFamily"                   Value="{StaticResource KeepCalm}"/>
+            <Setter Property="AbsoluteLayout.LayoutFlags"   Value="All"/>
+            <Setter Property="FontSize"                     Value="15"/>
+            <Setter Property="FontAttributes"               Value="Bold"/>
+            <Setter Property="TextColor"                    Value="WhiteSmoke"/>
+        </Style>
+        <Style x:Key="CurrentPage" TargetType="local:ExtendedLabel">
+            <Setter Property="FontFamily"                   Value="{StaticResource KeepCalm}"/>
+            <Setter Property="AbsoluteLayout.LayoutFlags"   Value="All"/>
+            <Setter Property="HorizontalTextAlignment"      Value="Center"/>
+            <Setter Property="FontSize"                     Value="45"/>
+            <Setter Property="FontAttributes"               Value="Bold"/>
+            <Setter Property="TextColor"                    Value="WhiteSmoke"/>
+        </Style>
+        <Style ApplyToDerivedTypes="True" TargetType="local:ExtendedEntry">
+            <Setter Property="FontFamily"       Value="{StaticResource KeepCalm}"/>
+            <Setter Property="FontSize"         Value="13"/>
+            <Setter Property="TextColor"        Value="WhiteSmoke"/>
+            <Setter Property="PlaceholderColor" Value="WhiteSmoke"/>
+        </Style>
+        <Style x:Key="KeyPadButton" TargetType="local:ExtendedButton">
+            <Setter Property="FontFamily"       Value="{StaticResource KeepCalm}"/>
+            <Setter Property="FontSize"         Value="20"/>
+            <Setter Property="FontAttributes"   Value="Bold"/>
+            <Setter Property="TextColor"        Value="Black"/>
+            <Setter Property="BackgroundColor"  Value="Transparent"/>
+            <Setter Property="BorderRadius"     Value="15"/>
+        </Style>
+    </Page.Resources>
+    <ContentPage.Content>
+        <local:ExtendedStackLayout StartColor="4E5C87" EndColor="1C2335">
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0, 0, 0, 0" Margin="0, 0, 0, 0">
+                <Image x:Name="Background" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Source="user_choice_bg.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Aspect="AspectFill"/>
+                <Image AbsoluteLayout.LayoutBounds="0.5, 0, 0.25, 0.25" AbsoluteLayout.LayoutFlags="All" Source="wallet_logo.png" HorizontalOptions="Fill" VerticalOptions="CenterAndExpand"/>
+
+                <!--Sign In Inputs-->
+                <StackLayout x:Name="LoginMenu" AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.6, 0.55" AbsoluteLayout.LayoutFlags="All" VerticalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Padding="0" RowSpacing="15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame x:Name="loginUsernameBG" Grid.Row="0" Grid.Column="0" Padding="10, 5, 10, 0" CornerRadius="25">
+                            <local:ExtendedEntry x:Name="loginUsername" Placeholder="Email or Username" Underline="False" Padding="20, 5, 20, 30"/>
+                        </Frame>
+                        <Frame x:Name="loginPasswordBG" Grid.Row="1" Grid.Column="0" Padding="10, 7, 10, -15" CornerRadius="25">
+                            <AbsoluteLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="0, 0, 0, 0" Margin="0, 0, 0, 0">
+                                <local:ExtendedEntry x:Name="loginPassword"        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"            AbsoluteLayout.LayoutFlags="All" IsPassword="True" Placeholder="Password" Underline="False" Padding="20, 5, 20, 30"/>
+                                <Image               x:Name="loginViewPassword"    AbsoluteLayout.LayoutBounds="0.985, 0, 0.1, 0.5"    AbsoluteLayout.LayoutFlags="All" Source="view_password_white.png" HeightRequest="24" WidthRequest="24" Opacity="0.5"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                        <local:ExtendedLabel Text="Forgot Password?" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center"/>
+                    </Grid>
+
+                    <local:ExtendedLabel x:Name="logIntoAccount" Text="LOG IN" VerticalOptions="EndAndExpand" Style="{StaticResource CurrentPage}"/>
+                </StackLayout>
+                
+                <!--Sign Up Inputs-->
+                <StackLayout x:Name="SignUpMenu" AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.6, 0.55" AbsoluteLayout.LayoutFlags="All" VerticalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" Padding="0" RowSpacing="15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame x:Name="signUpUsernameBG" Grid.Row="0" Grid.Column="0" Padding="10, 7, 10, 0" CornerRadius="25">
+                            <local:ExtendedEntry x:Name="signUpUsername" Placeholder="Username"    Underline="False" Padding="20, 5, 20, 30"/>
+                        </Frame>
+                        <Frame x:Name="signUpEmailBG" Grid.Row="1" Grid.Column="0" Padding="10, 7, 10, 0" CornerRadius="25">
+                            <local:ExtendedEntry x:Name="signUpEmail" Placeholder="Email"             Underline="False" Padding="20, 5, 20, 30"/>
+                        </Frame>
+                        <Frame x:Name="signUpPasswordBG" Grid.Row="2" Grid.Column="0" Padding="10, 7, 10, -15" CornerRadius="25">
+                            <AbsoluteLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="0, 0, 0, 0" Margin="0, 0, 0, 0">
+                                <local:ExtendedEntry x:Name="signUpPassword"        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"            AbsoluteLayout.LayoutFlags="All" IsPassword="True" Placeholder="Password" Underline="False" Padding="20, 5, 20, 30"/>
+                                <Image               x:Name="signUpViewPassword"    AbsoluteLayout.LayoutBounds="0.985, 0, 0.1, 0.5"    AbsoluteLayout.LayoutFlags="All" Source="view_password_white.png" HeightRequest="24" WidthRequest="24" Opacity="0.5"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                        <Frame x:Name="signUpConfirmPasswordBG" Grid.Row="3" Grid.Column="0" Padding="10, 7, 10, -15" CornerRadius="25">
+                            <AbsoluteLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="0, 0, 0, 0" Margin="0, 0, 0, 0">
+                                <local:ExtendedEntry x:Name="signUpConfirmPassword"     AbsoluteLayout.LayoutBounds="0, 0, 1, 1"            AbsoluteLayout.LayoutFlags="All" IsPassword="True" Placeholder="Confirm Password" Underline="False" Padding="20, 5, 20, 30"/>
+                                <Image               x:Name="signUpConfirmViewPassword" AbsoluteLayout.LayoutBounds="0.985, 0, 0.1, 0.5"    AbsoluteLayout.LayoutFlags="All" Source="view_password_white.png" HeightRequest="24" WidthRequest="24" Opacity="0.5"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                    </Grid>
+
+                    <local:ExtendedLabel Text="SIGN UP" VerticalOptions="EndAndExpand" Style="{StaticResource CurrentPage}"/>
+                </StackLayout>
+
+                <!--Sign In/Up Choices-->
+                <StackLayout AbsoluteLayout.LayoutBounds="0, 0.95, 1, 0.12" AbsoluteLayout.LayoutFlags="All" VerticalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="30, 0, 0, 0" ColumnSpacing="30">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0" Source="facebook_icon.png" HeightRequest="42" WidthRequest="42" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                        <Image Grid.Row="0" Grid.Column="1" Source="linkedin_icon.png" HeightRequest="42" WidthRequest="42" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+                        <Image Grid.Row="0" Grid.Column="2" Source="twitter_icon.png" HeightRequest="42" WidthRequest="42" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand"/>
+
+                        <local:ExtendedButton Grid.Row="0" Grid.Column="3" x:Name="switchActivity" Text="OR LOG IN" TextColor="White" FontSize="20" FontAttributes="Bold" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0, 0, 15, 0" Margin="0, 0, -35, 0" CornerRadius="50" BackgroundColor="#397DFF" Clicked="SwitchUserAccountChoice"/>
+                    </Grid>
+                </StackLayout>
+            </AbsoluteLayout>
+        </local:ExtendedStackLayout>
+    </ContentPage.Content>
+</local:Page>

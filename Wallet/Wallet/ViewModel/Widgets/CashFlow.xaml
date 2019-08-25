@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:Widget xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet;assembly=Wallet"
+             x:Class="Wallet.CashFlow">
+  <ContentView.Content>
+        <StackLayout x:Name="cashFlow" Margin="0" Padding="7.5, 0, 7.5, 5" Orientation="Vertical" BackgroundColor="WhiteSmoke" Spacing="0">
+            <!--Displaying the Title and Remaining balance Text-->
+            <StackLayout Orientation="Horizontal">
+                <Label Margin="0, 0, 0, 10" Text="Cash Flow" FontSize="Medium" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Start"/>
+                <Image x:Name="removeWidget"    Source="remove_widget.png"   HeightRequest="28" WidthRequest="28" HorizontalOptions="End"/>
+                <Image x:Name="addWidget"       Source="add_widget.png"      HeightRequest="28" WidthRequest="28" HorizontalOptions="End"/>
+            </StackLayout>
+            <Label x:Name="cashFlowRemaining" Text="£750.00" FontSize="Medium" TextColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Center"/>
+            <!--Displaying the Income/Value Text-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Income" FontSize="Small" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Start"/>
+                <Label x:Name="incomeTotal" Text="£1500.00" FontSize="Small" TextColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HorizontalTextAlignment="End"/>
+            </StackLayout>
+            <!--Displaying the income bar-->
+            <AbsoluteLayout Margin="0, 0, 0, 15" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="20" BackgroundColor="Gray">
+                <BoxView AbsoluteLayout.LayoutBounds="0,0,0.7,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Green"/>
+            </AbsoluteLayout>
+            <!--Displaying the Expenses/Value Text-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Expenses" FontSize="Small" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Start"/>
+                <Label x:Name="expensesTotal" Text="£750.00" FontSize="Small" TextColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HorizontalTextAlignment="End"/>
+            </StackLayout>
+            <!--Displaying the expenses bar-->
+            <AbsoluteLayout Margin="0, 0, 0, 15" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="20" BackgroundColor="Gray">
+                <BoxView AbsoluteLayout.LayoutBounds="0,0,0.5,1" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Red"/>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentView.Content>
+</local:Widget>

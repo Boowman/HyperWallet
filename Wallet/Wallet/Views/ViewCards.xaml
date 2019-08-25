@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:Page xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet"
+             x:Class="Wallet.ViewCards"
+             NavigationPage.HasNavigationBar="False">
+    <Page.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LouisGeorgeCafe">
+                <On Platform="Android" Value="Louis_George_Cafe.ttf#Louis George Cafet" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousines">
+                <On Platform="Android" Value="Champagne_Limousines.ttf#Champagne Limousines" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousinesBold">
+                <On Platform="Android" Value="Champagne_Limousines_Bold.ttf#Champagne Limousines Bold" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </Page.Resources>
+    <ContentPage.Content>
+        <local:ExtendedStackLayout StartColor="4E5C87" EndColor="1C2335">
+            <Grid Margin="0, 0, 0, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="navBar" Margin="60, 30, 60, 30" Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Image x:Name="menuButon"       Source="menuButton.png"     HorizontalOptions="Start"           WidthRequest="24" HeightRequest="24"/>
+                    <Label x:Name="title"           Text="Wallet"               HorizontalOptions="CenterAndExpand" VerticalOptions="Center"    FontSize="25"/>
+                    <Image x:Name="qrCodeButton"    Source="qr_code.png"        HorizontalOptions="Start"           WidthRequest="24" HeightRequest="24"/>
+                </StackLayout>
+                <StackLayout Margin="0" Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    <ScrollView x:Name="cardsScroller" Orientation="Horizontal">
+                        <StackLayout x:Name="availableCards" Orientation="Horizontal" HeightRequest="200" Padding="10, 0, 10, 0">
+                            <!--Available Cards-->
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </Grid>
+            <ScrollView Padding="30, 0, 30, 15" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                <StackLayout x:Name="widgetsHolder" Orientation="Vertical" Spacing="15">
+
+                </StackLayout>
+            </ScrollView>
+        </local:ExtendedStackLayout>
+    </ContentPage.Content>
+</local:Page>

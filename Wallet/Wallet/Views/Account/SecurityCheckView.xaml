@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:Page xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Wallet"
+             x:Class="Wallet.SecurityCheckView"
+             NavigationPage.HasNavigationBar="False">
+    <Page.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LouisGeorgeCafe">
+                <On Platform="Android" Value="Louis_George_Cafe.ttf#Louis George Cafet" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="KeepCalm">
+                <On Platform="Android" Value="KeepCalm-Medium.ttf#KeepCalm-Medium" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousines">
+                <On Platform="Android" Value="Champagne_Limousines.ttf#Champagne Limousines" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ChampagneLimousinesBold">
+                <On Platform="Android" Value="Champagne_Limousines_Bold.ttf#Champagne Limousines Bold" />
+            </OnPlatform>
+        </ResourceDictionary>
+        <Style ApplyToDerivedTypes="True" TargetType="local:ExtendedLabel">
+            <Setter Property="FontFamily"                   Value="{StaticResource KeepCalm}"/>
+            <Setter Property="AbsoluteLayout.LayoutFlags"   Value="All"/>
+            <Setter Property="FontSize"                     Value="15"/>
+            <Setter Property="FontAttributes"               Value="Bold"/>
+            <Setter Property="TextColor"                    Value="White"/>
+        </Style>
+        <Style x:Key="KeyPadButton" TargetType="local:ExtendedButton">
+            <Setter Property="FontFamily"       Value="{StaticResource KeepCalm}"/>
+            <Setter Property="FontSize"         Value="20"/>
+            <Setter Property="FontAttributes"   Value="Bold"/>
+            <Setter Property="TextColor"        Value="Black"/>
+            <Setter Property="BackgroundColor"  Value="Transparent"/>
+            <Setter Property="BorderRadius"     Value="15"/>
+        </Style>
+    </Page.Resources>
+    <ContentPage.Content>
+        <local:ExtendedStackLayout StartColor="4E5C87" EndColor="1C2335">
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0, 0, 0, 0" Margin="0, 0, 0, 0">
+                <Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Source="content_bg.png" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Aspect="AspectFill"/>
+                <Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Source="top.png" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Aspect="AspectFill"/>
+
+                <local:ExtendedLabel AbsoluteLayout.LayoutBounds="0, 0.03, 1, 0.05" Text="Login Authentication" HorizontalTextAlignment="Center" VerticalOptions="StartAndExpand"/>
+                <Image AbsoluteLayout.LayoutBounds="0.5, 0.3, 0.25, 0.25" AbsoluteLayout.LayoutFlags="All" Source="finger_print.png" HorizontalOptions="Fill" VerticalOptions="CenterAndExpand"/>
+
+                <Frame x:Name="pinEnterCheck" AbsoluteLayout.LayoutBounds="0, 0.5, 1, 0.15" AbsoluteLayout.LayoutFlags="All" Padding="0, 0, 0, 0" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" ColumnSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout x:Name="firstPin" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="20, 10, 20, 10" Grid.Row="0" Grid.Column="0" Opacity="0.5">
+                                <local:ExtendedLabel x:Name="firstPinText" Text="*" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <BoxView HorizontalOptions="Fill" VerticalOptions="End" HeightRequest="2" BackgroundColor="White"></BoxView>
+                            </StackLayout>
+                            <StackLayout x:Name="secondPin" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="20, 10, 20, 10" Grid.Row="0" Grid.Column="1" Opacity="0.5">
+                                <local:ExtendedLabel x:Name="secondPinText" Text="*" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <BoxView HorizontalOptions="Fill" VerticalOptions="End" HeightRequest="2" BackgroundColor="White"></BoxView>
+                            </StackLayout>
+                            <StackLayout x:Name="thirdPin" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="20, 10, 20, 10" Grid.Row="0" Grid.Column="2" Opacity="0.5">
+                                <local:ExtendedLabel x:Name="thirdPinText" Text="*" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <BoxView HorizontalOptions="Fill" VerticalOptions="End" HeightRequest="2" BackgroundColor="White"></BoxView>
+                            </StackLayout>
+                            <StackLayout x:Name="fourthPin" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="20, 10, 20, 10" Grid.Row="0" Grid.Column="3" Opacity="0.5">
+                                <local:ExtendedLabel x:Name="fourthPinText" Text="*" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <BoxView HorizontalOptions="Fill" VerticalOptions="End" HeightRequest="2" BackgroundColor="White"></BoxView>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                
+                <StackLayout AbsoluteLayout.LayoutBounds="0, 1, 1, 0.4" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="EndAndExpand" BackgroundColor="White">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="15" RowSpacing="15" Padding="15, 15, 15, 15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <local:ExtendedButton Text="1"      Grid.Row="0" Grid.Column="0" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text="2"      Grid.Row="0" Grid.Column="1" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text="3"      Grid.Row="0" Grid.Column="2" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text="4"      Grid.Row="1" Grid.Column="0" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text="5"      Grid.Row="1" Grid.Column="1" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text="6"      Grid.Row="1" Grid.Column="2" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text="7"      Grid.Row="2" Grid.Column="0" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text="8"      Grid.Row="2" Grid.Column="1" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text="9"      Grid.Row="2" Grid.Column="2" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text=""       Grid.Row="3" Grid.Column="0" Clicked="PinNumberBackspace"   Style="{StaticResource KeyPadButton}" Image="backspace.png"/>
+                        <local:ExtendedButton Text="0"      Grid.Row="3" Grid.Column="1" Clicked="PinNumberEntered"     Style="{StaticResource KeyPadButton}"/>
+                        <local:ExtendedButton Text=""       Grid.Row="3" Grid.Column="2" Clicked="SubmitPinCheck"       Style="{StaticResource KeyPadButton}" Image="next_login.png"/>
+                    </Grid>
+                </StackLayout>
+            </AbsoluteLayout>
+        </local:ExtendedStackLayout>
+    </ContentPage.Content>
+</local:Page>
